@@ -144,7 +144,7 @@ const Home = () => {
   const translateText = async (text) => {
     try {
       const targetLang = selectedLanguageRef.current;
-      const response = await fetch('http://localhost:8001/translate', {
+      const response = await fetch('http://localhost:8000/translate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

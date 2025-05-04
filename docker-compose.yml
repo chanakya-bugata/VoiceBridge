@@ -7,8 +7,10 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/app
+      - ./speech-text-speech-458721-c0f451d72fc4.json:/app/speech-text-speech-458721-c0f451d72fc4.json
     environment:
       - PYTHONUNBUFFERED=1
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/speech-text-speech-458721-c0f451d72fc4.json
 
   frontend:
     build:
