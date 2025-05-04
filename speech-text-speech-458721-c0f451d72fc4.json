@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "speech-text-speech-458721",
+  "private_key_id": "c0f451d72fc45f05d681d50c84cf915d5a5d877c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAH+934ZOjiv0f\nZ3V5IBsH98bhgqXmKY8jOC8SP+lpAiibJPoAoDHhY0jM7SxUENjAPO48aZgEzjCS\nHL16KZx+s8NgTIIev3XkaX5BWzUPO9xFfPke/q0yAEHWbk5IGacr9y/wOXVdfKOE\nRXyTfoJzeKTxBVRiuRKYWT5ZqzGDpNGpude3z+9NCLw6mMdDgm9BylSMzY5/hoRk\nUgTGdF4vxFjfuOd9M5CpZDjlcvSFWtEeIRJL0E36or8dc96P4pt0Q6hxtB8hCjz6\ny1RuZqkYitYnhVSR7Kve3rtwLD/cX4itrmzQBqmetvurVWusEY7nIdSmbpeluaD3\nP1bQCoS7AgMBAAECggEAR8HFwYs1htArITcVh6NnpS60j9apmtDr3rYl0pWfWnKN\ncwC5BVHPv4RDFRMCSvWt1wMK4fJ4blcKihAE7uMqyaHfd5Crysssv55tIwDrTODJ\nMQTv0NVDH9k7vdieEUzPhNrCg2Eahku+kPEZCcem9nTZehHJBkRkfxVZ9ci8ahOX\n9twEE0mE5FvBAqn5DSP9kWfkRYCe+DL3486K6D7LF4K8SY8Ir4obeZdOrcrTQWXf\n/J6hgjfatOtVbA5VjtdlPbItp61CNHT9IojZhTgsvVI9IhE8poYBIv+ImkxyG4ER\nVkN+pjk3eTWn5ZTE1xSnJGk9gAlxcveunKWBU/4gTQKBgQDe1KdD3tjDFvcdzm5T\nOtcZ+l8eXu+QJncuGJTVxDHOAh7vf4FtHR+XYD8vbyrz1FsUcsrWFkeoNzkJh2eP\nW5tLYSz7QZxRgGGFsBWQ5MmJchuUIdXtDuprdIarivhH5+fyNF3ee2DaYpXNLrmq\n8Whj1/zh1b3zc8a6MWhhqrywzQKBgQDcuS4C1gk/nPgkohco/2BadQIYhQ0RY753\nFKTVdEWtI+KF82r9PihjhvUKKWZxIRpprjOG6+19bqKduzMUAxOe0PhigS88p1W3\nN+fYG96rAsS4f8OtEFgwKak9ld0Zve8q7L9xq/50VGMPISLKKLzL8AquxMyXk+hl\nHUMCv0PrpwKBgH7Gcdt1X9GusS1uEuqbYWHQRmmbDaTvnYLGTXdJRiS0pDESU+pm\nVWDkS06Lat6KhL8fiDNBPceAk5zOQqcXMUUzpknUzEC6T8Glqr9iyx69ot8mWPWk\nNM6p3yydxh/y2s276WP4weO9jwjLeqq86e1UJvW9i3KE/h1UmtRmNTBJAoGBAI4p\ny4PSHeTWElFuASLL0WCRyobGc5NGvi9uoXhGSnZpDYafMMLpnRP1obAo2C13V87H\nf7KgFLfcYWrcXtq93I5HJCQ19pnHYYL/xBlCYhmdT91RlVPLmjFzM+lRtDXXSstH\n70qkr+B3VdIx0nmI4YktE4Rbhzb98gnmXfnP/UwzAoGAS/UYujcD3DNuT+nn2Ug/\nGPTJNelX+lXoI6ZjGgFQJQ9IVeC9mP1nbUTQxIyDtkJQBKD6mopte6QrugrA4W1z\nl5ftvK1fsXTYO3LHFECfnWqp5FiCIx+gTazADxHSYklk1DeJFGop1alNI7cEl1OC\nIpWf3rOfiSc+pJGc2MDdhs4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "lifebridge-ai@speech-text-speech-458721.iam.gserviceaccount.com",
+  "client_id": "117473966775451656007",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lifebridge-ai%40speech-text-speech-458721.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
