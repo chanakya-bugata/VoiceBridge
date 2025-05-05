@@ -15,7 +15,7 @@ app = FastAPI(title="VoiceBridge API")
 # Enable CORS with more specific configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://voicebridge-gfh2.onrender.com"],  # your frontend URL
+    allow_origins=["https://voicebridge-pfh2.onrender.com"],  # your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
