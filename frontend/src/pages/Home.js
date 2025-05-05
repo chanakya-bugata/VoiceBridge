@@ -26,6 +26,8 @@ const inputLanguages = [
   { code: 'brx-IN', name: 'Bodo' },
 ];
 
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+
 const Home = () => {
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
@@ -144,7 +146,7 @@ const Home = () => {
   const translateText = async (text) => {
     try {
       const targetLang = selectedLanguageRef.current;
-      const response = await fetch('http://localhost:8000/translate', {
+      const response = await fetch(`${apiUrl}/translate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
