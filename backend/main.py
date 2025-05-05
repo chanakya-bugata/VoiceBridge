@@ -15,12 +15,16 @@ app = FastAPI(title="VoiceBridge API")
 # Enable CORS with more specific configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins in development
+    allow_origins=["https://voicebridge-gfh2.onrender.com"],  # your frontend URL
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all methods
-    allow_headers=["*"],  # Allow all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
     expose_headers=["*"],
 )
+
+@app.get("/healthz")
+async def healthz():
+    return {"status": "ok"}
 
 class TranslationRequest(BaseModel):
     text: str
