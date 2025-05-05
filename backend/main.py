@@ -12,10 +12,10 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="VoiceBridge API")
 
-# Enable CORS with more specific configuration
+# TEMPORARY CORS FIX - For debugging only
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://voicebridge-pfh2.onrender.com"],  # your frontend URL
+    allow_origins=["*"],  # Allow all origins temporarily
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -57,6 +57,7 @@ async def translate_text(request: TranslationRequest):
         print("RAW REQUEST:", request)
         print("source_lang:", request.source_lang)
         print("target_lang:", request.target_lang)
+
         if not request.text:
             raise HTTPException(status_code=400, detail="Text cannot be empty")
         if not request.target_lang:
@@ -67,7 +68,8 @@ async def translate_text(request: TranslationRequest):
                 "source_lang": request.source_lang,
                 "target_lang": request.target_lang
             }
-        # Use Google Cloud Translate with auto-detect for source language
+
+        # Use Google Cloud Translate
         client = translate.Client()
         result = client.translate(
             request.text,
@@ -75,12 +77,14 @@ async def translate_text(request: TranslationRequest):
         )
         translated_text = result["translatedText"]
         detected_source = result.get("detectedSourceLanguage", request.source_lang)
+
         logger.info(f"Translation completed: {translated_text}")
         return {
             "translated_text": translated_text,
             "source_lang": detected_source,
             "target_lang": request.target_lang
         }
+
     except HTTPException as he:
         logger.error(f"HTTP error in translation: {str(he)}")
         raise
@@ -109,4 +113,4 @@ async def get_supported_languages():
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True) 
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
