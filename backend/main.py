@@ -5,10 +5,28 @@ import uvicorn
 import logging
 from google.cloud import translate_v2 as translate
 import os
+import json
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Set Google Cloud credentials
+GOOGLE_CREDENTIALS = os.environ.get('GOOGLE_CREDENTIALS')
+if GOOGLE_CREDENTIALS:
+    # For production: Use credentials from environment variable
+    credentials_dict = json.loads(GOOGLE_CREDENTIALS)
+    # Write the credentials to a temporary file
+    credentials_path = '/tmp/google-credentials.json'
+    with open(credentials_path, 'w') as f:
+        json.dump(credentials_dict, f)
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_path
+else:
+    # For local development: Use the credentials file
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)), 
+        'speech-text-speech-458721-c0f451d72fc4.json'
+    )
 
 app = FastAPI(title="VoiceBridge API")
 
